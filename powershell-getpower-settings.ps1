@@ -1,4 +1,9 @@
-
+#
+# Author: Jeremi Albrizio
+# Date: 2021-03-26
+# Version: 1.0
+# powershell get power settings
+#
 # Sleep settings
 #get the current active power plan
 Powercfg /List | Select-String "GUID" | select-String "\*" |%{$a=$_.ToString().split(" ")} 
